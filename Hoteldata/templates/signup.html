@@ -1,0 +1,55 @@
+{%load static%}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" type="text/css" href="{% static 'css_wad/Wad_Register.css' % }"> -->
+    <title>Regestration Form</title>
+    <script src="https://kit.fontawesome.com/be03954c52.js" crossorigin="anonymous"></script>
+    <script src="{% static './js_wad/wad.js' %}"></script>
+    <link rel="stylesheet" type="text/css" href="{% static 'css_wad/colour.css' %}">
+    
+</head>
+
+<body>
+    <form action="signup" id="reg" method="post">
+        {% csrf_token %}
+        <div id="reg-box">
+            <h1
+                style="text-align: center;font-family: Calibri, 'Trebuchet MS', sans-serif;margin-top: 0%; padding-top: 0%;">
+                Registration form</h1>
+                
+            <input type="text" name="first_name" id="first-name" style="width:25em" placeholder="First name" required>
+            <input type="text" name="last_name" id="last-name" style="width:25em" placeholder="Last name" required>
+            <input type="text" name="username" id="first-name" style="width:25em" placeholder="username" required>
+            <input type="email" name="email" id="email" style="width:25em" placeholder="Email" required>
+            <input type="password" name="password1" id="pswd" style="width:25em" placeholder="Password" required
+                minlength="8">
+            <input type="password" name="password2" id="confirm-pswd" style="width:25em"
+                placeholder="Confirm password" required minlength="8"><br>
+            <div id="check-box-form">
+                <input type="checkbox" value="check" id="check-box" required>
+                <label class="check-label" for="check-box">I Agree to the <a href="#">terms </a> and <a
+                        href="#">conditions</a></label>
+            </div>
+            <div style="text-align: center;">
+                <input type="submit" value="Register" id="register" name="register" onclick="matchPassword()"
+                    style="display: block;margin: 0 auto;">
+            </div>
+        </div>
+    </form>
+    <div style="text-align: center;">
+
+        {% for message in messages %}
+        <h3> {{message}} </h3>
+        {% endfor %}
+
+    </div>
+    <script src="{% static 'js_wad/Regestration.js'%}"></script>
+</body>
+
+</html>

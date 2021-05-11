@@ -1,0 +1,110 @@
+body{
+    background-color: rgba(95, 93, 93, 0.39);
+    margin: 0%;
+}
+.navbrand {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 900;
+    font-size: 2em;
+}
+/* 
+#footer {
+    padding: 10px 2em;
+}
+#adress a{
+    margin: 1.2em 0.5em;
+    padding: 0px;
+}
+#adress a button{
+    padding: 0px;
+}
+#Social-icons a{
+    margin: 0em 0.5em 1em 0.5em;
+    padding: 0px;
+}
+ .twitter, .instagram, .facebook, .linkedin, .youtube {
+    color: black;
+    
+}
+
+.twitter:hover{
+    color: #1DA1F2;
+}
+.instagram:hover{
+    color: #2C6A93;
+}
+.facebook:hover{
+    color: #4267B2;
+}
+.linkedin:hover{
+    color: blue;
+}
+.youtube:hover{
+    color: #FF0000;
+} 
+*/
+.form-control {
+    width: 12em;
+    display: inline-block;
+}
+#bookform {
+    background-color: rgba(214, 214, 130, 0.726);
+    margin: 2em 1em;
+    width: fit-content;
+    padding: 3em 3em;
+    border-radius: 0.5em;
+    margin-left: auto;
+    margin-right: auto;
+}
+#submit-button{
+    padding:0.25em 0.5em;
+    margin: 0.5em;
+    background-color: #80bce277;
+    color: rgb(255, 0, 0);
+    border:none;
+    border-radius: 0.25em;
+}
+#submit-button:hover{
+    color: #00ffff;
+    background-color: rgb(233, 58, 58);
+    transition: 0.25s ease-in;
+}
+img{
+    height: 80vh;
+    overflow: hidden;
+    object-fit: cover;
+}
+#footer{
+    background-color: 1px solid black;
+}
+.footer-links>a{
+    text-decoration: none;
+    color:rgba(29, 21, 21, 0.815);
+}
+.footer-links>a:hover{
+     box-shadow: 0 0.5em 0.25em -0.3em;
+    transform: translateY(-0.25em);
+    color: white;
+}
+.footer-icons>svg:hover{
+     box-shadow: 0 0.5em 0.25em -0.3em;
+    transform: translateY(-0.25em);
+    color: white;
+}
+.form-control {
+    width: 12em;
+    display: inline-block;
+}
+.props{
+    display: inline-block;
+}
+@media(max-width:550px)
+{
+    .footer-flex{
+        flex-direction: column;
+    }
+}
+svg:hover{
+     box-shadow: 0 0.5em 0.5em -0.4em;
+    transform: translateY(-0.25em);
+}

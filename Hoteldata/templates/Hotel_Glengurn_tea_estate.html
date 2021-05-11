@@ -1,0 +1,1147 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Hotel Glengurn tea estate</title>
+        <link rel="stylesheet" href="https://html.design/demo/five_hotel/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://html.design/demo/five_hotel/css/fontawesome.min.css">
+        
+        <link href="https://fonts.googleapis.com/css?family=Lobster|Lobster+Two|Noto+Serif" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+        <style>
+            body {
+                overflow-x: hidden;
+            }
+            
+            li {
+                list-style-type: none;
+            }
+            
+            a:hover {
+                text-decoration: none
+            }
+            
+            body {
+                font-size: 1.2rem;
+            }
+            
+            .small-container {
+                width: 95%;
+                margin: 0 auto;
+            }
+            
+            .main-font-family {
+                font-family: 'Lobster Two', cursive;
+            }
+            
+            .noto-font-family {
+                font-family: 'Noto Serif', serif;
+            }
+            
+            .lobster-font-family {
+                font-family: 'Lobster', cursive;;
+            }
+            
+            .roboto-font-family {
+                font-family: 'Roboto', sans-serif;
+            }
+            
+            .overlay {
+                background-color: rgba(43, 33, 2, .9);
+                height: 100%;
+                width: 100%;
+            }
+            
+            /* navbar */
+            
+            .navbar {
+                background-color: transparent !important;
+                position: absolute;
+                width: 100%;
+                z-index: 100;
+                top: 0;
+                left: 0;
+                padding-top: 0;
+            }
+            
+            .navbar ul li {
+                padding: 0 15px;
+            }
+            
+            .navbar .container {
+                width: 60%;
+                background-color: white;
+                transform: skew(-30deg);
+                padding: 5px 20px;
+                box-shadow: 1px 1px 10px #4e4e4e, -1px -1px 10px #4e4e4e;
+            }
+            
+            .navbar .book {
+                background-color: #cc0000;
+            }
+            
+            .navbar .book a {
+                color: white !important;
+                padding: 0px 10px;
+            }
+            
+            .navbar .navbar-nav {
+                transform: skew(30deg);
+                margin-right: 30px;
+            }
+            
+            /* header */
+            
+            header {
+                color: white;
+                background: #cc0000;
+                text-align: center;
+                position: relative;
+                overflow: hidden;
+            }
+            
+            header h1 {
+                font-size: 65px;
+                position: absolute;
+                z-index: 15;
+            }
+            
+            header h1 span {
+                color: black;
+                border: 1px solid #FFF;
+                font-size: 120px;
+                line-height: 2;
+                padding: 10px
+            }
+            
+            header .small-container {
+                padding-top: 150px;
+                position: relative;
+                width: 100%;
+            }
+            
+            header button {
+                display: block;
+                transform: skew(-25deg);
+                padding: 10px 40px;
+                border: none;
+                background-color: #ffcc33;
+                position: absolute;
+                bottom: 0;
+            }
+            
+            header button a {
+                color: black;
+            }
+            
+            header form {
+                position: relative;
+                width: 500px;
+                margin: 0 auto;
+                margin-bottom: 50px;
+                z-index: 50;
+                display: flex;
+            }
+            
+            header form input[type='search'] {
+                width: 70%;
+                border: none;
+                padding: 5px 5px 5px 30px;
+            }
+            
+            header form i {
+                color: black;
+                position: absolute;
+                left: 7px;
+                top: 8px;
+            }
+            
+            header input[type="submit"] {
+                width: 30%;
+                position: relative;
+                right: 0;
+                border: none;
+                height: 40px;
+                background-color: #cc0000;
+                color: white;
+            }
+            
+            header .welcome {
+                position: relative;
+                left: 15px;
+            }
+            
+            .st-rec, .rd-rec {
+                width: 200px;
+                height: 50px;
+                background-color: white;
+                position: absolute;
+                top: 0;
+                display: none;
+            }
+            
+            .st-rec {
+                left: 0;
+            }
+            
+            .rd-rec {
+               right: 0; 
+            }
+            
+            header .carousel-control-next, header .carousel-control-prev {
+                position: absolute;
+                left: -35px;
+                bottom: 0;
+                width: 70px;
+                height: 40px;
+                z-index: 3;
+                font-size: 25px;
+            }
+            
+            header .carousel-control-next {
+                background-color: #cc0000;
+                text-align: right !important;
+                top: 320px;
+            }
+            
+            header .carousel-control-prev {
+                background-color: #ffcc33;
+                color: black !important;
+                top: 370px;
+            }
+            
+            header .carousel-control-next i {
+                width: 60%;
+                margin: 0 auto;
+                text-align: right;
+            }
+            
+            header .carousel-control-prev i {
+                width: 60%;
+                margin: 0 auto;
+                text-align: left;
+            }
+            
+            header .h-slider {
+                position: absolute;
+                height: 100vh;
+                top: 0;
+                width: 60%;
+                left: 40%;
+                padding-top: 0;
+            }
+            
+            header .carousel,
+            header .carousel-inner,
+            header .carousel img,
+            header .carousel-item, 
+            header .carousel-item.active {
+                height: 100%;
+                height: 100%
+            }
+            
+            header .row {
+                padding: 0 30px;
+                height: 400px
+            }
+            
+            header .slide,
+            header .carousel-inner {
+                width: 100%;
+                height: 100%;
+            }
+            
+            header .carousel-item {
+                background-position: center;
+                background-size: cover;
+                width: 100%;
+                height: 100%;
+            }
+            
+            header .carousel-one {
+                background-image: url(../imgs/header.png);
+            }
+            
+            header .carousel-two {
+                background-image: url(../imgs/header.png);
+            }
+            
+            header .carousel-three {
+                background-image: url(../imgs/header.png);
+            }
+            
+            header button a {
+                transform: skew(26deg);
+                float: left;
+                width: 100%;
+            }
+            
+            .navbar-brand {
+                float: left;
+                transform: skew(30deg);
+            }
+            
+            /* about */
+            
+            .about {
+                padding-top: 70px;
+                background-image: url(../imgs/bg.png);
+                background-size: 100% 90%;
+                background-repeat: no-repeat;
+                margin-bottom: 100px;
+                position: relative;
+                overflow: hidden;
+            }
+            
+            .about h2 {
+                margin-bottom: 50px
+            }
+            
+            .about h2 + img {
+                position: absolute;
+                height: 200px;
+                width: 200px;
+                top: -20px;
+                left: -30px;
+                z-index: -1
+            }
+            
+            .about h4 {
+                color: #cc0000;
+                margin-bottom: 25px
+            }
+            
+            .about p {
+                line-height: 1.9;
+                margin-bottom: 70px;
+            }
+            
+            .about button {
+                background-color: #ffcc33;
+                border: none;
+                transform: skew(-25deg);
+            }
+            
+            .about button a {
+                color: #000;
+                padding: 10px 50px;
+                display: block;
+                float: left;
+                transform: skew(25deg);
+            }
+            
+            .about .container > .row:first-of-type {
+                margin-bottom: 50px
+            }
+            
+            .about .container > .row:first-of-type .img {
+                background-image: url(https://lh5.googleusercontent.com/p/AF1QipMSw1o_n7Yg6_W7gfktf3_xuqci59i8eSe-xJ3J=w325-h216-k-no);
+                background-size: cover;
+                height: 400px;
+                width: 659px;
+                position: relative;
+            }
+            
+            .about .container h2:last-of-type {
+                margin-left: 80px;
+            }
+            
+            .about .container > .row:last-of-type .img {
+                height: 450px;
+                width: 580px;
+                right: 120px;
+                background-image: url(https://www.uniqhotels.com/media/hotels/cb/3.%20chhatra%20sagar%20-%20tent%20interior.jpg.730x463_q85_box-0%2C0%2C1500%2C952_crop_detail.jpg);
+                background-size: cover;
+                position: relative
+            }
+            
+            .about .block {
+                background-color: white;
+                width: 850px;
+                padding: 30px 40px;
+                text-align: center;
+                position: relative;
+                top: 50px;
+                border: 1px solid black;
+            }
+            
+            .about .block > div {
+                width: 70%
+            }
+            
+            .about .block strong {
+                font-size: 43px;
+                font-weight: normal;
+            }
+            
+            .about .block h5 {
+                color: #cc3300;
+            }
+            
+            .about .block p {
+                margin: 0 auto;
+                margin-bottom: 20px
+            }
+            
+            .about .block img {
+                position: absolute;
+                height: 200px;
+                width: 200px;
+                top: 50px;
+                right: -40px;
+                display: none;
+            }
+            
+            /* gallery */
+            
+            .gallery {
+                padding: 70px 0;
+                background-image: url('../imgs/pic9.png');
+                background-size: cover;
+            }
+            
+            .gallery h2 {
+                margin-bottom: 50px
+            }
+            
+            .gallery .col-lg-4 > div{
+                height: 300px;
+                width: 100%;
+                margin-bottom: 30px;
+                position: relative
+            }
+            
+            .gallery .col-lg-4 > div h4 {
+                position: relative;
+                top: 40px;
+                z-index: 3;
+                text-align: center;
+            }
+            
+            .gallery .col-lg-4 > div.active {
+                height: 630px
+            }
+            
+            .gallery img {
+                width: 100%;
+                height: 100%;
+            }
+            
+            .gallery .pic-one,
+            .gallery .pic-two,
+            .gallery .pic-three,
+            .gallery .pic-four,
+            .gallery .pic-five {
+                background-position: center;
+                background-size: cover;
+            }
+            
+            .gallery .pic-one {
+                background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR33nhsERI9QEdiOhOT_WDcQ60H2AbdyRraoA&usqp=CAU.jpg')
+            }
+            
+            .gallery .pic-two {
+                background-image: url('https://lh5.googleusercontent.com/p/AF1QipP-B3n7haSCYqBAiD8KpWNX8111WT4kzfychbUQ=w325-h215-k-no')
+            }
+            .gallery .pic-three {
+                background-image: url('https://imgmedia.lbb.in/media/2019/06/5d0cb33899647345569156dc_1561113400046.jpg')
+            }
+            .gallery .pic-four {
+                background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDx-ZxMo6nuDtPCkSHh-COzRUGW8aRAhU-PA&usqp=CAUs')
+            }
+            .gallery .pic-five {
+                background-image: url('https://cf.bstatic.com/images/hotel/max1024x768/286/286805462.jpg')
+            }
+            
+            /* slider */
+            
+            .slider {
+                height: 450px;
+                padding: 50px 0;
+                margin-bottom: 30px
+            }
+            
+            .slider h2 {
+                font-size: 45px;
+            }
+                
+            .slider .carousel-indicators li {
+                background-color: #ffcc00;
+                padding: 6px;
+                border-radius: 0;
+                opacity: 1;
+            }
+            
+            .slider .carousel-indicators li.active {
+                background-color: #000;
+            }
+            
+            .slider .carousel-inner {
+                height: 400px
+            }
+            
+            .slider .carousel-inner .carousel-item {
+                height: 100%
+            }
+            
+            .slider .carousel-inner .carousel-item h5, .slider .carousel-inner .carousel-item p {
+                color: black;
+            }
+            
+            .slider .carousel-inner .carousel-item h5 {
+                color: #ffcc00;
+                font-size: 25px
+            }
+            
+            .slider .carousel-inner .carousel-item img {
+                width: 150px;
+                height: 150px;
+                border-radius: 50%;
+                margin-bottom: 30px
+            }
+            
+            .carousel-caption {
+                box-shadow: 5px 5px 10px #e0dddd, -5px -5px 10px #e0dddd;
+            }
+            
+            .carousel-indicators {
+                bottom: -40px;
+            }
+            
+            /* contact */
+            
+            .contact {
+                padding: 30px 0 70px;
+                position: relative;
+                margin-top: 80px;
+            }
+            
+            .contact .container > h2 {
+                font-size: 45px;
+                margin-bottom: 90px;
+            }
+            
+            .contact .col-6 h2 {
+                font-size: 55px;
+                width: 70%;
+                float: right
+            }
+            
+            .contact .contact-form {
+                background-color: rgba(212,5,1,.8);
+                padding: 52px;
+                border: 1px solid #000;
+                position: relative;
+                left: 111px;
+            }
+            
+            .contact form input, .contact form textarea {
+                width: 100%;
+                margin-bottom: 20px;
+                padding: 5px 10px;
+            }
+            
+            .contact form textarea {
+                resize: none;
+                height: 100px;
+            }
+            
+            .contact form input[type="submit"] {
+                width: 120px;
+                height: 40px;
+                background-color: #ffcc33;
+                border: none;
+                margin-bottom: 0;
+            }
+            
+            .contact > div:last-of-type {
+                z-index: -1;
+                position: absolute;
+                height: 570px;
+                width: 680px;
+                left: 0;
+                bottom: 0px;
+                background-image: url(../imgs/pic1.png);
+                background-size: cover;
+            }
+            
+            .contact .row > .col-6:last-of-type {
+                position: relative
+            }
+            
+            .contact h2 + img {
+                position: absolute;
+                height: 200px;
+                width: 200px;
+                right: -120px;
+                z-index: -3;
+            }
+            
+            /* footer */
+            
+            footer {
+                background-image: url('../imgs/pic8.png');
+                background-size: cover;
+                color: white
+            }
+            
+            footer a {
+                color: white
+            }
+            
+            footer a:hover {
+                color: #ffcc33;
+            }
+            
+            footer h3 {
+                margin-bottom: 20px
+            }
+            
+            footer ul {
+                padding-left: 0;
+            }
+            
+            footer ul li {
+                margin-bottom: 10px;
+            }
+            
+            footer p {
+                line-height: 1.9;
+            } 
+            
+            footer .overlay {
+                padding: 50px;
+            }
+            
+            footer .form ul {
+                overflow: hidden;
+                margin-top: 30px;
+            }
+            
+            footer .form ul li {
+                float: left;
+                padding: 0 15px;
+            }
+            
+            footer .form ul li a {
+                color: #ffcc33;
+                padding: 0 13px;
+                border: 1px solid #ffcc33;
+                border-radius: 50%;
+                display: block;
+                text-align: center;
+                width: 55px;
+                height: 55px;
+                line-height: 53px;
+            }
+            
+            footer .form ul li a i {
+                width: 15px;
+                text-align: center;
+            }
+            
+            footer form input:first-of-type {
+                padding-left: 10px;
+                width: 70%;
+                border: none;
+                padding: 4px 10px;
+            }
+            
+            footer form input:last-of-type {
+                width: 28%;
+                position: relative;
+                right: 4px;
+                border: none;
+                padding: 7px 7px 6px;
+                background-color: #cc0000;
+                color: white;
+                cursor: pointer;
+                font-size: 13px;
+                top: -2px;
+                height: 37px;
+            }
+            
+            .copyright {
+                text-align: center;
+                padding: 15px 0;
+            }
+            
+            .copyright p {
+                margin: 0
+            }
+            
+            .copyright p a {
+                color: #222;
+            }
+            
+            .copyright p a:hover,
+            .copyright p a:focus {
+               color: #cc0000;
+            }
+            
+            /* media queries */
+            
+            @media (max-width: 1200px) {
+                
+                /* navbar */
+                
+                .navbar ul li {
+                    padding: 0 5px;
+                }
+                .st-rec, .rd-rec {
+                    width: 130px
+                }
+                
+                /* header */
+                
+                header h1 {
+                    font-size: 45px;
+                }
+                header h1 span {
+                   font-size: 55px;
+                }
+                
+                /* about */
+                
+                .about .block {
+                    width: 750px;
+                }
+                
+                /* contact */
+                
+                .contact > div:last-of-type {
+                    width: 600px;
+                }
+            }
+            
+            @media (max-width: 992px) {
+                
+                /* navbar */
+                
+                .navbar {
+                    background-color: #FFF !important
+                }
+                .navbar .container {
+                    transform: skew(0deg);
+                }
+                .navbar ul li {
+                    margin: 10px 0;
+                }
+                .navbar .container {
+                    box-shadow: none;
+                }    
+                .navbar .navbar-nav {
+                    transform: skew(0deg)
+                }
+            
+                /* header */
+                
+                header {
+                    background-size: 100% 92.4%;
+                    background-position: bottom;
+                }
+                header button {
+                    position: static;
+                }
+                header .d-flex {
+                    display: block !important
+                }
+                header .col-lg-4 {
+                    order: 2
+                }
+                header .col-lg-4 h2 {
+                    margin-bottom: 20px
+                }
+                header .col-lg-8 {
+                    order: 1;
+                    margin-bottom: 50px;
+                }
+                header .welcome {
+                    position: relative;
+                    left: 0
+                }
+                .st-rec, .rd-rec {
+                    display: none
+                }
+                header .row {
+                    position: absolute;
+                    z-index: 15px;
+                    display: none
+                }
+                header .h-slider {
+                    width: 100%;
+                    top: -111px
+                }
+                header .carousel-control-next {
+                    left: auto;
+                    top: 48%
+                }
+                header .carousel-control-prev {
+                    left: 0;
+                    top: 48%
+                }
+                header .d-flex {
+                    display: flex !important;
+                }
+            
+                .navbar-brand {
+                   float: left;
+                   transform: skew(0deg);
+                }
+                
+                /* about */
+                
+                .about .container > .row:first-of-type .col-12:first-of-type {
+                    order: 2;
+                    margin-top: 50px
+                }
+                .about .container > .row:first-of-type .col-12:last-of-type {
+                    order: 1;
+                }
+                .about .block > div {
+                    width: 100%;
+                }
+                .about .container > .row:last-of-type .img {
+                    width: 100%;
+                    position: static;
+                }
+                .about .container > .row:last-of-type .block {
+                    position: static;
+                    width: 100%;
+                }
+                
+                /* contact */
+                
+                .contact > div:last-of-type {
+                    width: 100%;
+                }
+                .contact .col-6 h2 {
+                    font-size: 45px;
+                    margin-top: 55px;
+                    color: white;
+                }
+                .contact .contact-form {
+                    left: 0; 
+                    width: 400px;
+                }
+                
+                /* footer */
+                
+                footer .col-lg-4 {
+                    margin-bottom: 40px
+                }
+            }
+            
+            @media (max-width: 768px) {
+                
+                .about .container > .row:first-of-type .img {
+                    width: 500px;
+                }
+                .about .container > .row:last-of-type .img {
+                    height: 350px;
+                }
+                
+                .contact .col-6 h2 {
+                    display: none
+                }
+            
+                .navbar-brand {
+                    float: left;
+                    transform: skew(0);
+                    width: 100%;
+                    margin: 0;
+                    text-align: center;
+                }
+            
+                .navbar .container {
+                    width: 100%;
+                    padding: 5px 0;
+                }
+            
+                header form {
+                    width: 100%;
+                    display: flex;
+                }
+            
+            
+            }
+            
+            @media (max-width: 576px) {
+                
+                header .carousel-control-next,
+                header .carousel-control-prev {
+                    display: none;
+                }
+                
+                .about .container > .row:first-of-type .img {
+                    width: 400px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        
+        <nav class="navbar navbar-expand-lg navbar-light bg-light text-capitalize main-font-family">
+            <div class="container">
+                <a class="navbar-brand" href="index.html"><img src="https://www.glenburnteaestate.com/images/glenburn-logo.png" height="50" width="50" alt="#" /></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#show-menu" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="show-menu">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#home">Home <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#room">rooms</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Features
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="#">link</a>
+                                <a class="dropdown-item" href="#">Another link</a>
+                                <a class="dropdown-item" href="#">Another link</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#">Something else here</a>
+                            </div>
+                        </li>
+                        
+                        <li class="nav-item">
+                            <a class="nav-link" href="#blog">blog</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contact">contacts</a>
+                        </li>
+                        <li class="nav-item book d-flex align-items-center">
+                            <a class="nav-link" href="#">book now</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        
+        <header id="home">
+            <div class="small-container">
+
+    
+                <div class="row">
+                    <div class="col-lg-4 col-12 lobster-font-family d-flex align-items-center">
+                        <h2></h2>
+                        <button><a href="#">About hotel</a></button>
+                    </div>
+                </div>
+                <div class="h-slider roboto-font-family welcome d-flex align-items-center justify-content-center">
+        
+                    <h1 class="text-capitalize">Welcome to <br><span>Glengurn</span></h1> 
+
+                    <div id="headerslider" class="carousel slide" data-ride="carousel">
+                      <div class="carousel-inner">
+                        <div class="carousel-item carousel-three active"></div>
+                        <div class="carousel-item carousel-two"></div>
+                        <div class="carousel-item carousel-one"></div>
+                      </div>
+
+                      </a>
+                    </div>
+                </div>
+            </div>
+            <div class="st-rec"></div            <div class="rd-rec"></div>
+        </header>
+        
+        <div class="about lobster-font-family">
+            <div class="container">
+                <h2 class="text-center text-capitalize">About our hotel</h2>
+                
+                <div class="row">
+                    <div class="col-lg-6 col-12">
+                        <h4>A best place to enjoy your life</h4>
+                        <p> Glenburn Tea Estate their hotel of choice when visiting Darjeeling. Providing an ideal mix of value, comfort and convenience, it offers a luxury setting with an array of amenities designed for travellers like you..</p>
+                        <button><a href="#">Read more</a></button>
+                    </div>
+                    <div class="col-lg-6 col-12">
+                        <div  class="img">  </div>
+                        
+                    </div>
+                </div>
+                <h2 class="text-capitalize" id="room">rooms & suits</h2>
+                <div class="row">
+                    <div class="col-lg-4 col-12">
+                        <div class="img"></div>
+                    </div>
+                    <div class="col-lg-8 col-12">
+                        <div class="block">
+                            <div>
+                               
+                                <strong>INR 25000</strong>
+                                <h5>luxury rooms</h5>
+                                <p>Glenburn Tea Estate And Boutique Hotel in Darjeeling provides a breakfast to guests during their stay. This boutique in Darjeeling is 19 km from Chitrey Bus Stop and 1 km from Kambal Tea Garden.This boutique hotel has a single floor with 8 rooms,</p>
+                                <button><a href="#" class="text-capitalize">Read more</a></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="about lobster-font-family">
+            <div class="container">
+                <h2 class="text-center text-capitalize"></h2>
+                
+                
+                <h2 class="text-capitalize" id="room">Dining</h2>
+                <div class="row">
+                    <div class="col-lg-4 col-12">
+                        <div class="img"></div>
+                    </div>
+                    <div class="col-lg-8 col-12">
+                        <div class="block">
+                            <div>
+                                
+                                <strong></strong>
+                                <h5>luxury rooms</h5>
+                                <p>Our celebration of our local community rests largely on their traditions and heritage related to their Nepali ancestry and the culture of tea that is now part of our DNA.</p>
+                                <button><a href="#" class="text-capitalize">Read more</a></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+        <div class="gallery lobster-font-family" id="blog">
+            <div class="container">
+                <h2 class="text-calitalize text-center">Our gallery</h2>
+                <div class="row">
+                    <div class="col-lg-4 col-md-6 col-12">
+                        <div class="pic-one"><h4>Relaxed swimming</h4></div>
+                        <div class="pic-two"><h4>Spacious Accommodtion</h4></div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-12">
+                        <div class="pic-three active"><h4>Yoga Wellness</h4></div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-12">
+                        <div class="pic-four"><h4>Romantic dinner</h4></div>
+                        <div class="pic-five"><h4>Apa & Wellness</h4></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="slider main-font-family">
+            <h2 class="text-center text-capitalize main-font-family"></h2>
+          <div id="slideToNext" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+              <li data-target="#slideToNext" data-slide-to="0" class="active"></li>
+              <li data-target="#slideToNext" data-slide-to="1"></li>
+              <li data-target="#slideToNext" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <div class="carousel-caption d-block">
+                    
+                    <p>owned by</p>>
+                  <h5>Prakash family</h5>
+                  <p>Guests have access to room service while staying at Glenburn Tea Estate. In addition, Glenburn Tea Estate Hotel offers free breakfast.</p>
+                </div>
+              </div>
+              
+              
+            </div>
+          </div>
+        </div>
+        
+        <div class="contact main-font-family text-center">
+            <div class="container">
+                <h2 id="contact">Get in touch</h2>
+                <div class="row">
+                    <div class="col-6">
+                        <div class="contact-form">
+                            <form>
+                                <input type="text" placeholder="Name">
+                                <input type="email" placeholder="Email">
+                                <input type="text" placeholder="Phone">
+                                <textarea placeholder="Message"></textarea>
+                                <input type="submit" value="submit">
+                            </form>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <h2 class="text-right">Book Your Holiday Best for relaxed retreats and cultural encounters</h2>
+                        <img src="imgs/shape.png">
+                    </div>
+                </div>
+            </div>
+            <div></div>
+        </div>
+        
+        <footer class="noto-font-family">
+            <div class="overlay">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-4 col-md-6 col-12">
+                            <h3>Useful links</h3>
+                            <ul class="text-capitalize">
+                                <li><a href="#">Home</a></li>
+                                <li><a href="#">About</a></li>
+                                <li><a href="#">Rooms</a></li>
+                                <li><a href="#">Blog</a></li>
+                                <li><a href="#">Contacts</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-12">
+                            <h3>Find us</h3>
+                            <p>Glenburn Tea Estate,<br>
+                               Darjeeling 734101 India<br>
+                                (+91) 111 111 1111<br>
+                                (+91) 111 111 1111<br>
+                                <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="ef8986998a87809b8a83af88828e8683c18c8082">[email&#160;:abc@gmail.com]</a>
+                            </p>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-12 form">
+                            <h3>News letter</h3>
+                            <form>
+                                <input type="email" placeholder="Email">
+                                <input type="submit">
+                            </form>
+                            <ul>
+                                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        
+        <div class="copyright noto-font-family">
+            <p> THANK YOU <a href="https://html.design/">VISIT AGAIN </a></p>
+        </div>
+        
+        <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="js/jquery-3.3.1.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script>
+            $(function () {
+                
+                'use strict';
+                
+                var winH = $(window).height();
+                
+                $('header').height(winH);
+                
+                $('.navbar ul.navbar-nav li a').on('click', function (e) {
+                    
+                    var getAttr = $(this).attr('href');
+                    
+                    e.preventDefault();
+                    $('html').animate({scrollTop: $(getAttr).offset().top}, 1000);
+                });
+            });
+        </script>
+    </body>
+</html>

@@ -1,0 +1,137 @@
+body {
+    margin: 0%;
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: rgba(175, 173, 173, 0.199);
+    /* background-color: #0c0c25e3; */
+}
+
+form {
+    align-items: center;
+    border-radius: 0.5em;
+    box-shadow: 2px 2px 20px -12px black;
+    margin-left: auto;
+    margin-right: auto;
+    width: 30em;
+    background-color: rgb(255, 255, 255);
+    overflow: hidden;
+    transition: 10s ease-out ;
+}
+
+form:hover {
+    box-shadow: 2px 2px 20px -2px black;
+}
+
+#username, #pswd {
+    padding: 0.75em 1em 0.75em 0.75em;
+    margin: 0.5em 0.25em;
+    border: 0.001em solid rgba(156, 148, 148, 0.671);
+    border-radius: 0.5em;
+    font-size: 1em;
+    background-color: transparent;
+}
+
+#username:hover, #pswd:hover {
+    padding: 0.75em 1em 0.75em 0.75em;
+    margin: 0.5em 0.25em;
+    border: 0.001em solid rgba(156, 148, 148, 0.671);
+    border-radius: 0.5em;
+    font-size: 1em;
+    background-color: transparent;
+    box-shadow: 0px 1px 4px -1.5px rgba(0, 0, 2, 0.329);
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    color: rgb(46, 46, 65);
+    font-size: 1.01em;
+    text-shadow: 0.5px 0.5px 10px rgb(46, 46, 65);
+    cursor: pointer;
+}
+
+#submit {
+    border: none;
+    padding: 0.5em 1.5em;
+    background-color: blue;
+    color: white;
+    border-radius: 0.3em;
+}
+
+#submit:hover {
+    transition: 0.2s;
+    border: none;
+    padding: 0.55em 1.55em;
+    background-color: rgb(141, 10, 141);
+    box-shadow: 1px 1px 4px -1px black;
+    cursor: pointer;
+}
+
+#box {
+    padding: 1em 2em 1em 1.5em;
+    border-radius: 10em;
+    margin: 2em 0em;
+}
+
+hr {
+    margin: 2em 0em;
+}
+
+#Button1 {
+    background-color: #3b5998;
+    color: white;
+    padding: 0.625em 1.25em;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    cursor: pointer;
+    display: inline-block;
+    margin: 0 auto;
+    margin-left: 3em;
+}
+
+#Button2 {
+    background-color: rgb(231, 44, 44);
+    color: white;
+    padding: 0.625em 1.25em;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: inline-block;
+    float: right;
+    margin-right: 3em;
+}
+#Button1:hover {
+    background-color: #486fc2;
+    transition: 0.2s;
+    padding: 0.725em 1.35em;
+}
+#Button2:hover{
+    transition: 0.2s;
+    padding: 0.725em 1.35em;
+    background-color: rgb(255, 0, 0);
+}
+
+.label {
+    padding: 2.5em;
+}
+#register {
+    text-align: center; 
+    border: 1px solid rgba(0, 0, 0, 0.582);
+    margin: 1em 0em;
+    
+}
+#register a:hover {
+    color: rgb(0, 134, 0);
+    text-shadow: none;
+} 
+#register h5{
+    margin-top: 1em ;
+    margin-bottom: 1em ;
+}

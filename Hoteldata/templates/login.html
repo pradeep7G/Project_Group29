@@ -1,0 +1,54 @@
+{%load static%}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css_wad/Wad_login.css'%}">
+    <title>Login Form</title>
+    <script src="https://kit.fontawesome.com/be03954c52.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <form action="login" id="login" method="post">
+        {% csrf_token %}
+        <div id="box">
+            <h1 style="text-align: center;font-family: Calibri, 'Trebuchet MS', sans-serif;margin-top: 0%; padding-top: 0%;">Sign In</h1>
+            <input type="text" name="username" id="username" style="width:25em"
+                placeholder="Username" >
+            <input type="password" name="password" id="pswd" style="width:25em" placeholder="Password" required minlength="8">
+            <a href="#" style="float:right;">Forgot password?</a><br>
+            <div style="text-align: center;">
+                <a href="{% static '/wad.html' % }"><input type="submit" value="Sign In" id="submit" name="login" style="display: block;margin: 0 auto;"></a>
+            </div>
+            <div id="register">
+                <h5 >Don't have an account? <a href="{% static 'Wad_Register.html' % }">Create now</a></h5>
+            </div>
+            <hr>
+            <div>
+
+            </div>
+            <button id="Button1"><i class="fab fa-facebook-f"></i><span class="label"><a
+                        style="text-decoration: none;color: white;"
+                        href="#"> Facebook
+                    </a></span></button>
+            <button id="Button2"><i class="fab fa-google" ></i><span class="label"><a
+                        style="text-decoration: none;color: white;" href="#">
+                         Google</a></span></button>
+        </div>
+        
+    </form>
+    <div style="text-align: center;">
+
+        {% for message in messages %}
+        <h3> {{message}} </h3>
+        {% endfor %}
+
+    </div>
+    <script src="{% static 'js_wad/wad.js' % }"></script>
+</body>
+
+</html>
